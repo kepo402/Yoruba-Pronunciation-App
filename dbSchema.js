@@ -10,7 +10,7 @@ const dbSchema= {
 
         },
         {
-            name: 'user_recrdings',
+            name: 'user_recordings',
             columns: [
                 {name: 'id', type: 'INTEGER PRIMARY KEY INCREMENT'},
                 {name: 'user_id', type: 'INTEGER'},
