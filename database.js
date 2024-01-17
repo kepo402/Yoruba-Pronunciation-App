@@ -1,11 +1,12 @@
 import { openDatabase } from 'react-native-sqlite-storage';
+import { dbSchema } from './dbSchema'
 
 const db = await openDatabase({
   name: 'yoruba_pronunciation.db',
   location: 'default',
 });
 
-export default db;
+
 
 const createTables = async () => {
     for (const table of dbSchema.tables) {
@@ -14,4 +15,5 @@ const createTables = async () => {
     }
   };
   
-  createTables();
+await createTables();
+export default db  
